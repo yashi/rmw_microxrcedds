@@ -1,0 +1,10 @@
+name: rmw_microxrcedds
+build:
+  cmake: zephyr
+  kconfig: zephyr/Kconfig
+  depends:
+    - microcdr
+    - microxrcedds_client
+    - rcutils
+    - rmw
+    - rosidl_typesupport_microxrcedds
