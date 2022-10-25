@@ -56,10 +56,9 @@ else()
 endif()
 
 # Transport handle define macros.
-set(RMW_UXRCE_TRANSPORT_UDP ON)
-set(RMW_UXRCE_TRANSPORT_IPV4 ON)
-set(RMW_UXRCE_DEFAULT_UDP_IP "127.0.0.1" CACHE STRING "Sets the agent IP address.")
-set(RMW_UXRCE_DEFAULT_UDP_PORT "8888" CACHE STRING "Sets the agent IP port.")
+set(RMW_UXRCE_TRANSPORT_CUSTOM ON)
+set(RMW_UXRCE_TRANSPORT_UDP OFF)
+set(RMW_UXRCE_TRANSPORT_IPV4 OFF)
 
 configure_file(
   ${ZEPHYR_CURRENT_MODULE_DIR}/rmw_microxrcedds_c/src/config.h.in
@@ -120,4 +119,5 @@ zephyr_library_sources(
   ${ZEPHYR_CURRENT_MODULE_DIR}/rmw_microxrcedds_c/src/rmw_microros/time_sync.c
   ${ZEPHYR_CURRENT_MODULE_DIR}/rmw_microxrcedds_c/src/rmw_microros/ping.c
   ${ZEPHYR_CURRENT_MODULE_DIR}/rmw_microxrcedds_c/src/rmw_microros/timing.c
+  ${ZEPHYR_CURRENT_MODULE_DIR}/rmw_microxrcedds_c/src/rmw_microros/custom_transport.c
 )
