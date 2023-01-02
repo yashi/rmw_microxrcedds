@@ -1,6 +1,5 @@
 build:
   cmake-ext: True
-  kconfig-ext: True
   depends:
     - microcdr
     - microxrcedds-client
